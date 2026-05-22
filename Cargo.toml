@@ -1,0 +1,17 @@
+[package]
+name = "routeiq-sdk"
+version = "0.2.0"
+edition = "2021"
+description = "RouteIQ SDK — instrument AI agents with task/step/tool spans"
+
+[dependencies]
+opentelemetry       = { version = "0.28", features = ["trace"] }
+opentelemetry_sdk   = { version = "0.28", features = ["trace", "rt-tokio"] }
+opentelemetry-otlp  = { version = "0.28", features = ["grpc-tonic", "http-proto"] }
+uuid                = { version = "1", features = ["v4"] }
+sha2                = "0.10"
+hex                 = "0.4"
+serde_json          = "1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
