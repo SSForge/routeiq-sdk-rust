@@ -319,6 +319,8 @@ pub struct AgentEvent {
     pub autonomy_mode: i32,
     #[prost(enumeration="RiskTier", tag="16")]
     pub risk_tier: i32,
+    #[prost(string, tag="17")]
+    pub session_id: ::prost::alloc::string::String,
     #[prost(oneof="agent_event::Payload", tags="100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110")]
     pub payload: ::core::option::Option<agent_event::Payload>,
 }
